@@ -45,3 +45,25 @@ void list_contatcs(Contact *contacts, int count)
         printf("\nEmail: %s\n", contacts[i].email);
     }
 }
+
+void search_contact(Contact *contacts, int count)
+{
+    char query[MAX_NAME];
+    printf("Enter the name to search: ");
+    fgets(query, MAX_NAME, stdin);
+    query[strcspn(query, "\n")] = '\0';
+
+    for (int i = 0; i < count; i++)
+    {
+        if (strstr(contacts[i].name, query) != NULL)
+        {
+            printf("\nFound\n");
+            printf("\nName: %s\n", contacts[i].name);
+            printf("\nPhone: %s\n", contacts[i].phone);
+            printf("\nEmail: %s\n", contacts[i].email);
+            return;
+        }
+    }
+
+    printf("Contact not found.\n");
+}
