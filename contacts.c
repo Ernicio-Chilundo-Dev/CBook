@@ -67,3 +67,28 @@ void search_contact(Contact *contacts, int count)
 
     printf("Contact not found.\n");
 }
+
+void contact_remove(Contact **contacts, int *count)
+{
+    char query[MAX_NAME];
+    printf("Enter the name to remove the contact: ");
+    fgets(query, MAX_NAME, stdin);
+    query[strcspn(query, "\n")] = '\0';
+
+    for (int i = 0; i < *count; i++)
+    {
+        if (strcmp((*contacts)[i].name, query) == 0)
+        {
+            for (int j = i; j < *count - 1; j++)
+            {
+                (*contacts)[j] = (*contacts)[j + 1];
+            }
+            (*count)--;
+            *contacts = realloc(*contacts, (*count) * sizeof(Contact));
+            printf("Contact remove.\n");
+            return;
+        }
+    }
+    printf("Contact not found.\n");
+
+}
