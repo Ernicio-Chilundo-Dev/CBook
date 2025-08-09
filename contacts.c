@@ -40,8 +40,8 @@ void list_contatcs(Contact *contacts, int count)
     for (int i = 0; i < count; i++)
     {
         printf("\nContato: %d\n", i + 1);
-        printf("\nName: %s\n", *contacts->name);
-        printf("\nPhone: %s\n", *contacts->phone);
-        printf("\nEmail: %s\n", *contacts->email);
+        printf("\nName: %s\n", contacts[i].name);
+        printf("\nPhone: %s\n", contacts[i].phone);
+        printf("\nEmail: %s\n", contacts[i].email);
     }
 }
