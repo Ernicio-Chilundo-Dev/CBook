@@ -28,3 +28,20 @@ void add_contact(Contact **contacts, int *count)
     (*count)++;
     printf("Contact added sucessfull!\n");
 }
+
+void list_contatcs(Contact *contacts, int count)
+{
+    if (count == 0)
+    {
+        printf("No contacts have been saved.\n");
+        return;
+    }
+
+    for (int i = 0; i < count; i++)
+    {
+        printf("\nContato: %d\n", i + 1);
+        printf("\nName: %s\n", *contacts->name);
+        printf("\nPhone: %s\n", *contacts->phone);
+        printf("\nEmail: %s\n", *contacts->email);
+    }
+}
