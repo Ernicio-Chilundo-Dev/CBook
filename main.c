@@ -21,5 +21,18 @@ int main(void)
         scanf("%d", &choice);
         getchar();
 
+        switch (choice)
+        {
+            case 1: add_contact(&contacts, &count); break;
+            case 2: list_contacts(contacts, count); break;
+            case 3: search_contact(contacts, count); break;
+            case 4: remove_contact(&contacts, &count); break;
+            case 5: printf("Exiting...\n"); break;
+            default: printf("Invalid option.\n");
+        }
+
     } while (choice != 5);
+
+    free(contacts);
+    return 0;
 }

@@ -29,7 +29,7 @@ void add_contact(Contact **contacts, int *count)
     printf("Contact added sucessfull!\n");
 }
 
-void list_contatcs(Contact *contacts, int count)
+void list_contacts(Contact *contacts, int count)
 {
     if (count == 0)
     {
@@ -68,7 +68,7 @@ void search_contact(Contact *contacts, int count)
     printf("Contact not found.\n");
 }
 
-void contact_remove(Contact **contacts, int *count)
+void remove_contact(Contact **contacts, int *count)
 {
     char query[MAX_NAME];
     printf("Enter the name to remove the contact: ");
