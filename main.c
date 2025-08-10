@@ -9,4 +9,17 @@ int main(void)
     int count  = 0;
     int choice;
 
+    do
+    {
+        printf("\n====================== Contacts manager ======================\n");
+        printf("1. Add contact\n");
+        printf("2. List contacts\n");
+        printf("3. Search contact\n");
+        printf("4. Remove contact\n");
+        printf("5. Exit\n");
+        printf("Choice: ");
+        scanf("%d", &choice);
+        getchar();
+
+    } while (choice != 5);
 }
