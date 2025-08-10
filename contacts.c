@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <contacts.h>
+#include "contacts.h"
 
 void add_contact(Contact **contacts, int *count)
 {
